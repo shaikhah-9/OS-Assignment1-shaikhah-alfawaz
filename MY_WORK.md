@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [shaikhah mohammed alfawaz] |
+| **Student ID** | [446051747] |
+| **University Email** | [446051747]@std.psau.edu.sa |
+| **GitHub Username** | [shaikhah-9] |
+| **Repository Link** | [https://github.com/shaikhah-9/OS-Assignment1-shaikhah-alfawaz] |
  
 ---
 
@@ -129,29 +129,28 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [october 03, 2026, 4:00 PM]
+**What I did**: forked the starter repository renamed it, and set my student ID in SchedulerSimulation.java
 
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Details**: Cloned my repository to my Mac using the terminal and opened it in vs Code. Set my student ID 446051747and committed it with the message "Set my student ID: 446051747".
+**Challenges**:macos asked me to accept the Xcode license before Git could work vs Code showed "Make sure you configure user.name and user.email"
+**Solution**:Accepted the Xcode license in the terminal.
+**Time spent**:30 min
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 3, 2026 ,4:00pm]
+**What I did**:Implemented Feature 1: Process Priority.
 
 **Details**:
+Add a priority field to the Process class updated the constructor to receive it, and added getpriority(). In main each process gets a random priority from 1 to 10. The priority is displayed when a process enters the ready queue
+the order=FIFO 
 
-**Challenges**:
+**Challenges**: i didt know how to use the same random object for the priority would change the burst times of my original simulation
 
-**Solution**:
+**Solution**:create a separate random generator priorityRandom
 
-**Time spent**:
+**Time spent**: 1 houre and a half 
 
 ---
 
