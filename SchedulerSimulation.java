@@ -357,9 +357,7 @@ public class SchedulerSimulation {
 
         // Print a message indicating the process has entered the ready queue
         System.out.println(Colors.BLUE + "  ➕ " + Colors.BOLD + Colors.CYAN + process.getName() +
-                Colors.RESET + Colors.BLUE + " added to ready queue" + Colors.RESET +
-                " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" +
-                Colors.RESET + "(Priority: " + Colors.MAGENTA + process.getpriority() + ")" + Colors.RESET
+                "(Priority: " + Colors.MAGENTA + process.getpriority() + ")" + Colors.RESET
                 + " enters the ready queue)" + Colors.RESET + " │ Burst time: " + Colors.YELLOW + process.getBurstTime()
                 + "ms" + Colors.RESET); // feature 1: Display the process priority when it enters the ready queue.
                                         // Priority is for display/tracking ,it does NOT change the Round Robin order
