@@ -150,33 +150,33 @@ the order=FIFO
 
 **Solution**:create a separate random generator priorityRandom
 
-**Time spent**: 1 houre and a half 
+**Time spent**: 1 houre and a half
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 4 , 2026 ,3:30pm]
+**What I did**:Feature 2: Context Switch Counter.
 
-**Details**:
+**Details**: Add a static variable counter in the SchedulerSimulation class incremented it before every currentThread.start(), and printed the total at the end.
+**Challenges**:my commits stayed on my computer and did not appear on GitHub
 
-**Challenges**:
+**Solution**: i open the vs Code terminal used git status to see that my commits were not pushed yet, and then ran (git push origin main) to upload them to GitHub
 
-**Solution**:
-
-**Time spent**:
+**Time spent**: 45 min
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [october 5 , 2026 , 8:40AM]
+**What I did**: Feature 3, Waiting Time Tracking.
 
-**Details**:
+**Details**: Added two long fields to the Process class: startTime and totalWaitTime. add enterReadyQueue() which saves the current time using System.currentTimeMillis() and is called in addProcessToQueue every time a process enters the ready queue.i also add tartRunning(); which adds the time the process waited, and is called right before currentThread.start(). Added getTotalWaitTime() to read the total. I created a list allProcesses to keep every process and printed a summary table at the end with Process Name, Burst Time, Waiting Time, and Turnaround Time
 
-**Challenges**:
-
+**Challenges**:i choose long instead of int because System.currentTimeMillis() returns a very large number
+*i got a MissingFormatArgumentException because my printf had more format specifiers than values.
 **Solution**:
-
-**Time spent**:
+*i use long for both time fields.
+*made the number of %s specifiers equal to the number of values in printf.
+**Time spent**: 1 hour and 20 min
 
 ---
 
@@ -236,7 +236,7 @@ the order=FIFO
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[i learned that the process class implements runnable and new thread is create for. it in addprocesstoqueue , also when thread.start() is call, the thread runs the run() (who has the task) i learned that join() makes the main wite unit the current process finish .thread.sleep is ude inside run() to simulate the process using the CPU for its time quantum. what suprised me that was the contect switches (30)even though the process was 14 i think the reason behind that that many process didt finish in own time quantum so they went back to the ready queue and ran again]
 
 ## Question 2: What was the most challenging part of this assignment?
 
