@@ -244,7 +244,7 @@ the order=FIFO
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most challenging part for me was understanding the original code at the beginning. the code was long and had many parts, like the colors, threads, also the ready queue, so it was hard to know which part were important for the features that I have to add. I also found it challenging to work on real GitHub projects for the first time. I had a problem with get like the user name and the user email error. My comments did not appear on the GitHub because I didn't push them and I even delete my report three for mistake it made me realize that working with Git is as important as writing the code itself.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -252,7 +252,9 @@ the order=FIFO
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[first of all I read the README step by step which helped me understand what each part of the code does before changing it. 
+I ran the program more than once and compared the output with the code,
+and I used commands like git status and git log to understand what's going on. Also, The most important thing is that I divided the work into days one feature per day, and tested each step before moving to the next one]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -260,7 +262,7 @@ the order=FIFO
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[i can use the Multithreading in blackboard thousands of students everyday log into blackboard at the time ,the server can use a separate thread of each student request, so one student uploading a file dont make another student to wait , this is similar to my assignment, where each process had it's own thread]
 
 ### Optional: What would you like to learn more about?
 
