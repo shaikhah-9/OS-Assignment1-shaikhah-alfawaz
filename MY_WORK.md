@@ -180,16 +180,16 @@ the order=FIFO
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 6, 2026, 3:20 PM]
+**What I did**:Completed the reflection and Technical Answers sections and fixed the ready queue message.
 
-**Details**:
+**Details**:answered the 4 reflection questions and the 3 technical questions in MY_WORK.md,also noticed that the ready queue message was printing "added to ready queue" and "enters the ready queue" together with the burst time twice so I fixed it.
 
-**Challenges**:
+**Challenges**:understanding the thread lifecycle states and the difference between the main thread waiting on join() and P1 thread sleeping
 
-**Solution**:
+**Solution**:ifollowed P1 step by step through the code from new Thread(process) to the end of run()
 
-**Time spent**:
+**Time spent**: 2 hours
 
 ---
 
@@ -294,7 +294,7 @@ and I used commands like git status and git log to understand what's going on. A
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[in thread it's a lightweight  process, so the process it has its own memory, but a thread it is smaller part inside the memory and it's shared the same memory with other threads،like you point in our code, the process it simulated only the threat is real in Java, and it's a created by newthreat(process) inside the method addprocesstoqueue(), the first different is the memory share, the thread change the value of remainingtime inside the run() after join() the main thread read the same value using isfinished() without any way to communicate, the second different is the cost creation, of course the threat is more much lighter and faster to creation compared to the process and that's important because the threat is a new every time we go back to the ready queue and we use the thread instead of the process separated because every operation simulated we need to share the same processqueue and the processmap, so the threat is the perfect choice, because it's make it faster and easier]
 
 ## Question 2: Ready Queue Behavior
 
@@ -306,15 +306,53 @@ and I used commands like git status and git log to understand what's going on. A
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[in my run the time quantum is 5000 ms and P4 has a burst time of 11941 ms, so P4 ran for 5000 ms twice and finished in its third turn with the last 1941 ms This means P4 was requeued 2 times before it finished]
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+[                         CPU SCHEDULER SIMULATION                                ║
+╠═══════════════════════════════════════════════════════════════════════════════════════╣
+║  ⚙ Processes:     14                                                               ║
+║  ⏱ Time Quantum:  5000ms                                                           ║
+║  🔑 Student ID:    446051747                                                        ║
+╚═══════════════════════════════════════════════════════════════════════════════════════╝
+
+  ➕ P1(Priority: 10) enters the ready queue) │ Burst time: 7227ms
+  ➕ P2(Priority: 9) enters the ready queue) │ Burst time: 8001ms
+  ➕ P3(Priority: 2) enters the ready queue) │ Burst time: 7902ms
+  ➕ P4(Priority: 2) enters the ready queue) │ Burst time: 11941ms
+  ➕ P5(Priority: 9) enters the ready queue) │ Burst time: 3796ms
+  ➕ P6(Priority: 7) enters the ready queue) │ Burst time: 11177ms
+  ➕ P7(Priority: 1) enters the ready queue) │ Burst time: 8901ms
+  ➕ P8(Priority: 10) enters the ready queue) │ Burst time: 8679ms
+  ➕ P9(Priority: 2) enters the ready queue) │ Burst time: 10681ms
+  ➕ P10(Priority: 2) enters the ready queue) │ Burst time: 7806ms
+  ➕ P11(Priority: 1) enters the ready queue) │ Burst time: 11518ms
+  ➕ P12(Priority: 1) enters the ready queue) │ Burst time: 4498ms
+  ➕ P13(Priority: 3) enters the ready queue) │ Burst time: 11354ms
+  ➕ P14(Priority: 10) enters the ready queue) │ Burst time: 2943ms
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                        ▶  SCHEDULER STARTING  ◀                               ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+
+
+  ▶ P4 executing quantum [5000ms] 
+  ⚡ Quantum progress: [███████████████] 100%
+  ⏸ P4 completed quantum 5000ms │ Overall progress: [████████░░░░░░░░░░░░] 41%
+     Remaining time: 6941ms
+  ↻ P4 yields CPU for context switch
+
+  ➕ P4(Priority: 2) enters the ready queue) │ Burst time: 11941ms
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P6 → P7 → P8 → P9 → P10 → P11 → P12 → P13 → P14 → P1 → P2 → P3 → P4]
+└───────────────────────────────────────────────────────────────────────────────
+]
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+[the snipping show the first turn of P4. P4 ran for one full time quantum 5000 ms but its burst time is 11941 ms so it still had 6941 ms remaining. Because it did not finish, it yielded the CPU and was added back to the end of the ready queue which is why P4 appears last in the queue after P3.]
 
 ## Question 3: Thread Lifecycle
 
@@ -324,15 +362,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: [after it is created with new thread(process) in addProcessToQueue() while it is waiting in the ready queue but has not been started yet]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [when the scheduler loop takes its thread out of the queue and calls currentThread.start()]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [when the CPU executes its run() method]
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: [Inside run() P1 thread calls Thread.sleep(stepTime) to simulate using the cpu at the same time the main thread is waiting on currentThread.join() until p1 finishes its quantum]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [when run() ends]
 
 ## Question 4: Real-World Applications
 
@@ -361,13 +399,13 @@ Example from my output:
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.How Thread.start() and Thread.join() control which process runs
+2.How context switches happen every time a new process starts running
+3.How Round Robin uses a time quantum and requeues unfinished processes
 
 **Concepts I need to study more:**
-1.
-2.
+1.Git commands
+2.Thread synchronization
 
 ---
 
@@ -376,26 +414,26 @@ Example from my output:
 > ⚠️ **WARNING:** Go through every line. Late submission costs **-1 mark per day**, and the deadline is **October 10, 2026**.
 
 **Repository**
-- [ ] Repository is **PUBLIC** (Settings → Danger Zone → Visibility)
-- [ ] Repository is renamed to `OS-Assignment1-YourFirstName-YourLastName`
-- [ ] GitHub account uses the university email (`@std.psau.edu.sa`)
+- [✅] Repository is **PUBLIC** (Settings → Danger Zone → Visibility)
+- [✅] Repository is renamed to `OS-Assignment1-YourFirstName-YourLastName`
+- [✅] GitHub account uses the university email (`@std.psau.edu.sa`)
 
 **Code**
-- [ ] Student ID is set in `SchedulerSimulation.java` (line 150)
-- [ ] Code compiles and runs with no errors
-- [ ] Feature 1 (priority), Feature 2 (context switches) and Feature 3 (waiting time table) all work
-- [ ] Each feature has clear comments
+- [✅] Student ID is set in `SchedulerSimulation.java` (line 150)
+- [ ✅] Code compiles and runs with no errors
+- [ ✅] Feature 1 (priority), Feature 2 (context switches) and Feature 3 (waiting time table) all work
+- [ ✅] Each feature has clear comments
 
 **Commits**
-- [ ] **At least 3 meaningful commits, ideally 6 or more**
-- [ ] **One commit per feature**
-- [ ] Commits are spread over **different dates** (not all in the last hour)
-- [ ] Everything is **pushed** to GitHub
+- [ ✅] **At least 3 meaningful commits, ideally 6 or more**
+- [ ✅] **One commit per feature**
+- [ ✅] Commits are spread over **different dates** (not all in the last hour)
+- [ ✅] Everything is **pushed** to GitHub
 
 **This file (`MY_WORK.md`)**
-- [ ] Full name and student ID filled in at the top
-- [ ] Development log has **5+ entries** on different dates
-- [ ] Reflection: 4 questions, 5-7 sentences each
+- [ ✅] Full name and student ID filled in at the top
+- [ ✅] Development log has **5+ entries** on different dates
+- [ ✅] Reflection: 4 questions, 5-7 sentences each
 - [ ] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
 - [ ] No `[...]` placeholders left
 - [ ] No section headers deleted
