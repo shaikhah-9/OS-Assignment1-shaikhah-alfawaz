@@ -383,18 +383,18 @@ Example from my output:
 ### Example 1 (operating-system level): [Name of scenario]
 
 **Description**:
-[Describe the real-world scenario.]
+[on my MacBook i can use VS Code and music at the same time The operating system gives each program a short amount of CPU time, then moves to the next program. In my simulation, each program is like a process the short amount of time is the time quantum and moving between programs is a context switch.]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[It is fair because every program gets a turn and no program can use the cpu forever.]
 
-### Example 2: [Name of application/scenario]
+### Example 2: [printer Queue]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[printing system could use round Robin to manage multiple printing tasks Each printing task is like a process, and the time quantum is the amount of time or number of pages printed before moving to another task. The switch between printing tasks represents a context switch]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[This can be useful when many users are waiting because each task gets a chance to make progress.]
 
 ## Summary
 
