@@ -39,7 +39,7 @@
 
 ## 🎥 Video Link
 
-**Video Link**: [Paste your video link here]
+**Video Link**: [https://drive.google.com/file/d/1OEtX56euQjYJ6UC_PspyF1waqSZOfolt/view?usp=drive_link]
 
 > ⚠️ **WARNING:** The video must be **publicly accessible** ("Anyone with the link can view") on **Google Drive**, **YouTube (Unlisted or Public)** or any other cloud file-sharing system. A private, restricted or broken link counts as a **missing video (-1 mark)**.
 >
@@ -210,13 +210,13 @@ the order=FIFO
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [10 hours]
 
-**Most challenging part**:
+**Most challenging part**:Understanding the original code at the beginning, and working on a real GitHub project
 
-**Most interesting learning**:
+**Most interesting learning**:Seeing that my simulation had 30 context switches with only 14 processes,understand how Round-Robin shares the CPU
 
-**What I would do differently next time**:
+**What I would do differently next time**:make sure my documentation matches my code exactly
 
 ---
 
@@ -434,14 +434,14 @@ Example from my output:
 - [ ✅] Full name and student ID filled in at the top
 - [ ✅] Development log has **5+ entries** on different dates
 - [ ✅] Reflection: 4 questions, 5-7 sentences each
-- [ ] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
-- [ ] No `[...]` placeholders left
-- [ ] No section headers deleted
+- [✅ ] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
+- [ ✅] No `[...]` placeholders left
+- [✅ ] No section headers deleted
 
 **Video**
-- [ ] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
-- [ ] Shows your name, ID, repository, 3 features, IDE execution, one threading concept, and commit history
-- [ ] Link is **public** (tested in an incognito window) and pasted in the **Video Link** section above
+- [✅ ] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
+- [ ✅] Shows your name, ID, repository, 3 features, IDE execution, one threading concept, and commit history
+- [ ✅] Link is **public** (tested in an incognito window) and pasted in the **Video Link** section above
 
 **Blackboard**
 - [ ] Submit **only** the link to your public GitHub repository
